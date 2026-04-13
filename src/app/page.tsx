@@ -34,10 +34,9 @@ export default function Home() {
   return (
     <>
       <Hero
-        greeting="Herzlich willkommen"
         title="Schön, dass Sie da sind!"
-        subtitle="Wenn Lesen und Schreiben zur Herausforderung werden, braucht es mehr als Übung – eine Förderung, die die Grundlagen versteht und Kinder Schritt für Schritt sicher begleitet."
-        secondaryText="In meiner Zweigstelle in Peine-Stederdorf biete ich gezielte Unterstützung für Kinder mit Lese-Rechtschreib-Schwäche (LRS) an. Mein Ziel ist es, Kinder individuell zu fördern und ihnen wieder mehr Sicherheit und Freude am Lernen zu ermöglichen."
+        highlight="Mehr als Üben – Grundlagen verstehen."
+        subtitle="Individuelle LRS-Förderung für Kinder und Jugendliche in Peine-Stederdorf. Ich unterstütze Ihr Kind dabei, Lesen und Schreiben von Grund auf sicher zu lernen."
       />
 
       {/* Trust-Bar */}
