@@ -11,7 +11,24 @@ import {
   ShieldCheck,
   UserCheck,
   MapPin,
+  CalendarCheck,
+  Lightbulb,
 } from "lucide-react";
+
+const trustPoints = [
+  {
+    icon: Award,
+    text: "Über 20 Jahre Berufserfahrung",
+  },
+  {
+    icon: CalendarCheck,
+    text: "Schnelle Terminvergabe möglich",
+  },
+  {
+    icon: Lightbulb,
+    text: "Nicht nur üben – verstehen lernen",
+  },
+];
 
 export default function Home() {
   return (
@@ -21,6 +38,27 @@ export default function Home() {
         highlight="Mehr als Üben – Grundlagen verstehen."
         subtitle="Individuelle LRS-Förderung für Kinder und Jugendliche in Peine-Stederdorf. Ich unterstütze Ihr Kind dabei, Lesen und Schreiben von Grund auf sicher zu lernen."
       />
+
+      {/* Trust-Bar */}
+      <section className="relative z-10 -mt-8 sm:-mt-10 pb-8">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="bg-white rounded-2xl shadow-lg border border-warm-100 grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-warm-100">
+            {trustPoints.map((point) => (
+              <div
+                key={point.text}
+                className="flex items-center gap-4 px-6 py-5 sm:py-6"
+              >
+                <div className="w-10 h-10 bg-primary-50 rounded-full flex items-center justify-center shrink-0">
+                  <point.icon className="w-5 h-5 text-primary-600" />
+                </div>
+                <span className="font-medium text-text-primary text-sm sm:text-base leading-snug">
+                  {point.text}
+                </span>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Mein Angebot */}
       <section className="py-20 sm:py-28">
