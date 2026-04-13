@@ -72,7 +72,7 @@ export default function SignsChecklist() {
         <div className="mt-8 p-5 bg-primary-50 rounded-xl border border-primary-200">
           <p className="text-primary-800 font-medium text-sm">
             Mehrere dieser Anzeichen treffen zu? Das kann ein Hinweis auf eine
-            Lese-Rechtschreib-Schwäche sein. In einem persönlichen Gespräch können wir
+            Lese-Rechtschreib-Schwäche sein. In einem persönlichen Gespräch kann ich
             gemeinsam herausfinden, wie ich Ihr Kind am besten unterstützen kann.
           </p>
         </div>

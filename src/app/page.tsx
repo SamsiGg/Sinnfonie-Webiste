@@ -87,7 +87,7 @@ export default function Home() {
             <FeatureCard
               icon={BookOpen}
               title="Strukturierte Methoden"
-              description="Auf Basis wissenschaftlich fundierter Methoden arbeiten wir systematisch an den Grundlagen der Lese- und Schreibfähigkeit."
+              description="Auf Basis wissenschaftlich fundierter Methoden arbeite ich systematisch an den Grundlagen der Lese- und Schreibfähigkeit."
             />
           </div>
         </div>

@@ -15,7 +15,7 @@ const processSteps = [
   {
     title: "Erstgespräch",
     description:
-      "In einem persönlichen Gespräch lernen wir uns kennen. Sie schildern mir Ihre Beobachtungen und ich erkläre Ihnen, wie die Förderung abläuft.",
+      "In einem persönlichen Gespräch lernen Sie mich kennen. Sie schildern mir Ihre Beobachtungen und ich erkläre Ihnen, wie die Förderung abläuft.",
   },
   {
     title: "Einschätzung & Diagnostik",
@@ -30,7 +30,7 @@ const processSteps = [
   {
     title: "Regelmäßige Förderung",
     description:
-      "In regelmäßigen Sitzungen arbeiten wir systematisch und mit viel Geduld an den Grundlagen. Die Fortschritte werden kontinuierlich überprüft und der Plan angepasst.",
+      "In regelmäßigen Sitzungen arbeite ich mit Ihrem Kind systematisch und mit viel Geduld an den Grundlagen. Die Fortschritte werden kontinuierlich überprüft und der Plan angepasst.",
   },
 ];
 
@@ -146,7 +146,7 @@ export default function LRSPage() {
               Ziele der Förderung
             </h2>
             <p className="mt-4 text-text-secondary text-lg leading-relaxed">
-              Gemeinsam arbeiten wir daran, dass Ihr Kind sicher und mit Freude
+              Ich arbeite daran, dass Ihr Kind sicher und mit Freude
               lesen und schreiben lernt.
             </p>
           </div>
@@ -173,7 +173,7 @@ export default function LRSPage() {
 
       <CTASection
         title="Bereit für den ersten Schritt?"
-        description="Das Erstgespräch ist unverbindlich. Gemeinsam finden wir heraus, wie ich Ihr Kind am besten unterstützen kann."
+        description="Das Erstgespräch ist unverbindlich. Gemeinsam finden wir den besten Weg, wie ich Ihr Kind unterstützen kann."
       />
     </>
   );

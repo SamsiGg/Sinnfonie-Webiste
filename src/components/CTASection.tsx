@@ -8,7 +8,7 @@ interface CTASectionProps {
 
 export default function CTASection({
   title = "Möchten Sie einen Termin vereinbaren?",
-  description = "Ich freue mich darauf, Sie und Ihr Kind kennenzulernen. In einem unverbindlichen Erstgespräch besprechen wir gemeinsam, wie ich Ihr Kind unterstützen kann.",
+  description = "Ich freue mich darauf, Sie und Ihr Kind kennenzulernen. In einem unverbindlichen Erstgespräch bespreche ich mit Ihnen, wie ich Ihr Kind unterstützen kann.",
 }: CTASectionProps) {
   return (
     <section className="bg-primary-700 py-20">

@@ -174,7 +174,7 @@ export default function UeberMichPage() {
       </section>
 
       <CTASection
-        title="Lassen Sie uns ins Gespräch kommen"
+        title="Lassen Sie mich wissen, wie ich helfen kann"
         description="Ich freue mich darauf, Sie und Ihr Kind persönlich kennenzulernen."
       />
     </>
