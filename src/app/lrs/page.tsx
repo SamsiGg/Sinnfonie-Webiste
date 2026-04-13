@@ -43,9 +43,9 @@ const goals = [
   },
   {
     icon: BookOpen,
-    title: "Flüssiges Lesen",
+    title: "Flüssiges Lesen und Schreiben",
     description:
-      "Schritt für Schritt wird das Lesen flüssiger und sicherer – von einzelnen Wörtern bis hin zu ganzen Texten.",
+      "Schritt für Schritt werden Lesen und Schreiben flüssiger und sicherer – von einzelnen Wörtern bis hin zu ganzen Texten und eigenen Sätzen.",
   },
   {
     icon: SmilePlus,
