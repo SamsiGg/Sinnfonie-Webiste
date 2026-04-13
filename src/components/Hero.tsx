@@ -2,18 +2,22 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 
 interface HeroProps {
+  greeting?: string;
   title: string;
   highlight?: string;
   subtitle: string;
+  secondaryText?: string;
   showCta?: boolean;
   ctaText?: string;
   ctaHref?: string;
 }
 
 export default function Hero({
+  greeting,
   title,
   highlight,
   subtitle,
+  secondaryText,
   showCta = true,
   ctaText = "Termin anfragen",
   ctaHref = "/kontakt",
@@ -23,6 +27,11 @@ export default function Hero({
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--color-primary-100)_0%,_transparent_60%)] opacity-40" />
       <div className="relative max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-36">
         <div className="max-w-3xl">
+          {greeting && (
+            <p className="text-primary-500 font-medium text-lg mb-3 tracking-wide">
+              {greeting}
+            </p>
+          )}
           <h1 className="font-serif text-4xl sm:text-5xl lg:text-6xl font-semibold text-text-primary leading-tight">
             {title}
             {highlight && (
@@ -32,6 +41,11 @@ export default function Hero({
           <p className="mt-6 text-lg sm:text-xl text-text-secondary leading-relaxed max-w-2xl">
             {subtitle}
           </p>
+          {secondaryText && (
+            <p className="mt-4 text-lg sm:text-xl text-text-secondary leading-relaxed max-w-2xl">
+              {secondaryText}
+            </p>
+          )}
           {showCta && (
             <div className="mt-10 flex flex-wrap gap-4">
               <Link
