@@ -53,8 +53,8 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 shrink-0" />
-                <a href="mailto:info@sinnfonie.de" className="hover:text-white transition-colors">
-                  info@sinnfonie.de
+                <a href="mailto:bettina@geffert.de" className="hover:text-white transition-colors">
+                  bettina@geffert.de
                 </a>
               </div>
             </div>

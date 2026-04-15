@@ -37,6 +37,8 @@ export default function Home() {
         title="Schön, dass Sie da sind!"
         highlight="Mehr als Üben – Grundlagen verstehen."
         subtitle="Individuelle LRS-Förderung für Kinder und Jugendliche in Peine-Stederdorf. Ich unterstütze Ihr Kind dabei, Lesen und Schreiben von Grund auf sicher zu lernen."
+        imageSrc="/startfoto.png"
+        imageAlt="Sinnfonie Praxisraum"
       />
 
       {/* Trust-Bar */}

@@ -66,10 +66,10 @@ export default function KontaktPage() {
                       E-Mail
                     </h3>
                     <a
-                      href="mailto:info@sinnfonie.de"
+                      href="mailto:bettina@geffert.de"
                       className="text-primary-600 hover:text-primary-700 transition-colors"
                     >
-                      info@sinnfonie.de
+                      bettina@geffert.de
                     </a>
                   </div>
                 </div>
