@@ -21,16 +21,30 @@ export default function Header() {
     <header className="bg-white/90 backdrop-blur-sm sticky top-0 z-50 border-b border-warm-100">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
-          <Link href="/" className="flex items-center gap-3 group shrink-0">
-            <Image
-              src="/logo.jpeg"
-              alt="Sinnfonie – Bettina Geffert, Logopädin"
-              width={160}
-              height={64}
-              className="h-14 w-auto object-contain"
-              priority
-            />
-          </Link>
+          <div className="flex items-center gap-3 sm:gap-4 min-w-0">
+            <Link href="/" className="group shrink-0">
+              <Image
+                src="/logo.jpeg"
+                alt="Sinnfonie – Bettina Geffert, Logopädin"
+                width={220}
+                height={72}
+                className="h-14 w-auto object-contain shrink-0"
+                priority
+              />
+            </Link>
+
+            <div className="hidden sm:flex items-center shrink-0">
+              <Image
+                src="/startfoto.png"
+                alt="Bettina Geffert"
+                width={48}
+                height={48}
+                sizes="48px"
+                className="h-12 w-12 rounded-full object-cover ring-2 ring-white shadow-md border border-warm-200"
+                priority
+              />
+            </div>
+          </div>
 
           <nav className="hidden md:flex items-center gap-8">
             {navLinks.map((link) => (
