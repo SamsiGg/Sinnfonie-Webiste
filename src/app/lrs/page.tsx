@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Hero from "@/components/Hero";
 import ProcessStep from "@/components/ProcessStep";
 import SignsChecklist from "@/components/SignsChecklist";
@@ -91,7 +92,24 @@ export default function LRSPage() {
             </p>
           </div>
 
-          <div className="mt-12 p-8 bg-warm-50 rounded-2xl border border-warm-100">
+          <figure className="mt-12 mb-10">
+            <div className="overflow-hidden rounded-2xl shadow-xl ring-1 ring-warm-200/80 bg-warm-50">
+              <Image
+                src="/lrs-kind-hilfe.jpg"
+                alt="Schulkind sitzt erschöpft am Schreibtisch und hält ein handgeschriebenes Schild mit der Aufschrift Hilfe"
+                width={1024}
+                height={682}
+                className="w-full h-auto align-middle"
+                sizes="(max-width: 896px) 100vw, 896px"
+              />
+            </div>
+            <figcaption className="mt-4 text-center text-text-muted text-sm sm:text-base leading-relaxed max-w-2xl mx-auto px-2">
+              Wenn Lesen und Schreiben zur Belastung werden, braucht es keinen
+              Vorwurf – sondern Fachkräfte, die an den Ursachen ansetzen.
+            </figcaption>
+          </figure>
+
+          <div className="mt-10 p-8 bg-warm-50 rounded-2xl border border-warm-100">
             <h3 className="font-serif text-xl font-semibold text-text-primary mb-4">
               LRS oder Lese-Rechtschreib-Störung?
             </h3>
@@ -112,6 +130,28 @@ export default function LRSPage() {
       <section className="py-20 sm:py-28 bg-white">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <SignsChecklist />
+        </div>
+      </section>
+
+      {/* Motivation: positives Lernen */}
+      <section className="py-16 sm:py-20 bg-gradient-to-b from-warm-50/80 via-white to-white border-t border-warm-100">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <figure>
+            <div className="overflow-hidden rounded-3xl shadow-2xl ring-1 ring-warm-200/90">
+              <Image
+                src="/lrs-kind-konzentriert.jpg"
+                alt="Schulkind konzentriert beim Schreiben in einem hellen, freundlichen Lernumfeld"
+                width={1024}
+                height={682}
+                className="w-full h-auto align-middle"
+                sizes="(max-width: 1024px) 100vw, 1024px"
+              />
+            </div>
+            <figcaption className="mt-6 text-center text-text-secondary text-base sm:text-lg leading-relaxed max-w-2xl mx-auto px-2">
+              Mit strukturierter Förderung und Ruhe kann Üben wieder gut tun –
+              Schritt für Schritt, im eigenen Tempo.
+            </figcaption>
+          </figure>
         </div>
       </section>
 

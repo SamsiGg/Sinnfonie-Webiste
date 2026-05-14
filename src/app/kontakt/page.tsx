@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Hero from "@/components/Hero";
 import { MapPin, Clock, Phone, Mail } from "lucide-react";
 
@@ -22,9 +23,26 @@ export default function KontaktPage() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Contact Info */}
             <div>
-              <h2 className="font-serif text-3xl font-semibold text-text-primary mb-8">
+              <h2 className="font-serif text-3xl font-semibold text-text-primary mb-6">
                 So erreichen Sie mich
               </h2>
+
+              <figure className="mb-10">
+                <div className="overflow-hidden rounded-2xl shadow-xl ring-1 ring-warm-200/90 max-w-sm mx-auto lg:mx-0 bg-warm-50">
+                  <Image
+                    src="/kontakt-portrait.jpg"
+                    alt="Bettina Geffert, Logopädin – freundlich in die Kamera blickend"
+                    width={627}
+                    height={697}
+                    className="w-full h-auto align-middle"
+                    sizes="(max-width: 1024px) 100vw, 384px"
+                    priority
+                  />
+                </div>
+                <figcaption className="mt-3 text-center lg:text-left text-sm text-text-muted">
+                  Bettina Geffert · Logopädin
+                </figcaption>
+              </figure>
 
               <div className="space-y-6">
                 <div className="flex gap-5 p-6 bg-white rounded-2xl border border-warm-100 shadow-sm">

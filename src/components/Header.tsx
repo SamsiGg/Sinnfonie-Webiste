@@ -32,18 +32,6 @@ export default function Header() {
                 priority
               />
             </Link>
-
-            <div className="hidden sm:flex items-center shrink-0">
-              <Image
-                src="/startfoto.png"
-                alt="Bettina Geffert"
-                width={48}
-                height={48}
-                sizes="48px"
-                className="h-12 w-12 rounded-full object-cover ring-2 ring-white shadow-md border border-warm-200"
-                priority
-              />
-            </div>
           </div>
 
           <nav className="hidden md:flex items-center gap-8">

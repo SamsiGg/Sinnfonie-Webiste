@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Hero from "@/components/Hero";
 import FeatureCard from "@/components/FeatureCard";
 import CTASection from "@/components/CTASection";
@@ -37,8 +38,6 @@ export default function Home() {
         title="Schön, dass Sie da sind!"
         highlight="Mehr als Üben – Grundlagen verstehen."
         subtitle="Individuelle LRS-Förderung für Kinder und Jugendliche in Peine-Stederdorf. Ich unterstütze Ihr Kind dabei, Lesen und Schreiben von Grund auf sicher zu lernen."
-        imageSrc="/startfoto.png"
-        imageAlt="Sinnfonie Praxisraum"
       />
 
       {/* Trust-Bar */}
@@ -59,6 +58,37 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Kernmotiv – zwischen Vertrauen und Angebot */}
+      <section
+        className="pb-16 sm:pb-20 pt-4 sm:pt-6 bg-gradient-to-b from-white via-warm-50/30 to-warm-50"
+        aria-labelledby="home-motiv-heading"
+      >
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2
+            id="home-motiv-heading"
+            className="sr-only"
+          >
+            Orientierung und Struktur
+          </h2>
+          <figure className="mx-auto">
+            <div className="relative overflow-hidden rounded-3xl shadow-2xl shadow-primary-900/10 ring-1 ring-black/8">
+              <Image
+                src="/home-kernmotiv.jpg"
+                alt="Stilisierte Darstellung: von unübersichtlichen zu geordneten Gedanken – passend zur schrittweisen LRS-Förderung"
+                width={1024}
+                height={563}
+                className="w-full h-auto align-middle"
+                sizes="(max-width: 1024px) 100vw, 1024px"
+              />
+            </div>
+            <figcaption className="mt-6 text-center text-text-secondary text-base sm:text-lg leading-relaxed max-w-2xl mx-auto px-2">
+              Lesen und Schreiben lernen heißt oft: Unübersichtliches sortieren –
+              bis es wieder zusammenhängt. Genau dabei begleite ich Ihr Kind.
+            </figcaption>
+          </figure>
         </div>
       </section>
 
