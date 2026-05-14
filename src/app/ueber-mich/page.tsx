@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import Hero from "@/components/Hero";
 import CTASection from "@/components/CTASection";
 import {
@@ -27,18 +28,23 @@ export default function UeberMichPage() {
       <section className="py-20 sm:py-28">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex flex-col md:flex-row gap-12 items-start">
-            <div className="w-full md:w-1/3">
-              <div className="bg-primary-50 rounded-2xl aspect-[3/4] flex items-center justify-center border border-primary-100">
-                <div className="text-center p-6">
-                  <div className="w-20 h-20 mx-auto bg-primary-100 rounded-full flex items-center justify-center mb-4">
-                    <HandHeart className="w-10 h-10 text-primary-600" />
-                  </div>
-                  <p className="text-sm text-primary-600 font-medium">Bettina Geffert</p>
-                  <p className="text-xs text-primary-400 mt-1">
-                    Logopädin & Dipl. Lehrlogopädin
-                  </p>
+            <div className="w-full md:w-1/3 shrink-0">
+              <figure className="md:sticky md:top-28">
+                <div className="overflow-hidden rounded-2xl shadow-xl ring-1 ring-warm-200/90 bg-warm-50 max-w-sm mx-auto md:mx-0">
+                  <Image
+                    src="/ueber-mich-portrait.jpg"
+                    alt="Portrait von Bettina Geffert, Logopädin und Diplom-Lehrlogopädin"
+                    width={627}
+                    height={697}
+                    className="w-full h-auto align-middle"
+                    sizes="(max-width: 768px) 100vw, 384px"
+                    priority
+                  />
                 </div>
-              </div>
+                <figcaption className="mt-3 text-center md:text-left text-sm text-text-muted">
+                  Bettina Geffert · Logopädin und Dipl. Lehrlogopädin
+                </figcaption>
+              </figure>
             </div>
 
             <div className="w-full md:w-2/3">

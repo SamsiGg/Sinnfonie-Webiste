@@ -47,15 +47,15 @@ export default function Footer() {
               </div>
               <div className="flex items-center gap-3">
                 <Phone className="w-4 h-4 shrink-0" />
-                <a href="tel:+4951714000000" className="hover:text-white transition-colors">
-                  Telefon auf Anfrage
+                <a href="tel:+4951284000778" className="hover:text-white transition-colors">
+                  05128&nbsp;4000778
                 </a>
               </div>
               <div className="flex items-center gap-3">
                 <Mail className="w-4 h-4 shrink-0" />
-                <a href="mailto:bettina@geffert.de" className="hover:text-white transition-colors">
-                  bettina@geffert.de
-                </a>
+                <span className="text-primary-200">
+                  bettina (at) geffert.de
+                </span>
               </div>
             </div>
           </div>

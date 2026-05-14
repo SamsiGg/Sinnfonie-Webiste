@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Hero from "@/components/Hero";
+import ContactForm from "@/components/ContactForm";
 import { MapPin, Clock, Phone, Mail } from "lucide-react";
 
 export const metadata: Metadata = {
@@ -18,31 +19,32 @@ export default function KontaktPage() {
         showCta={false}
       />
 
+      <section className="relative z-10 -mt-6 sm:-mt-8 pb-10 sm:pb-14">
+        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+          <figure className="mx-auto">
+            <div className="overflow-hidden rounded-3xl shadow-2xl ring-1 ring-warm-200/90 bg-neutral-900">
+              <Image
+                src="/kontakt-motiv.jpg"
+                alt="Symbolisches Foto: Füße auf gepflastertem Weg, roter Pfeil zeigt nach vorn – der nächste Schritt zum Kontakt"
+                width={1024}
+                height={682}
+                className="w-full h-auto align-middle"
+                sizes="(max-width: 1024px) 100vw, 1024px"
+                priority
+              />
+            </div>
+          </figure>
+        </div>
+      </section>
+
       <section className="py-20 sm:py-28">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
             {/* Contact Info */}
             <div>
-              <h2 className="font-serif text-3xl font-semibold text-text-primary mb-6">
+              <h2 className="font-serif text-3xl font-semibold text-text-primary mb-8">
                 So erreichen Sie mich
               </h2>
-
-              <figure className="mb-10">
-                <div className="overflow-hidden rounded-2xl shadow-xl ring-1 ring-warm-200/90 max-w-sm mx-auto lg:mx-0 bg-warm-50">
-                  <Image
-                    src="/kontakt-portrait.jpg"
-                    alt="Bettina Geffert, Logopädin – freundlich in die Kamera blickend"
-                    width={627}
-                    height={697}
-                    className="w-full h-auto align-middle"
-                    sizes="(max-width: 1024px) 100vw, 384px"
-                    priority
-                  />
-                </div>
-                <figcaption className="mt-3 text-center lg:text-left text-sm text-text-muted">
-                  Bettina Geffert · Logopädin
-                </figcaption>
-              </figure>
 
               <div className="space-y-6">
                 <div className="flex gap-5 p-6 bg-white rounded-2xl border border-warm-100 shadow-sm">
@@ -70,7 +72,12 @@ export default function KontaktPage() {
                       Telefon
                     </h3>
                     <p className="text-text-secondary">
-                      Telefonnummer auf Anfrage
+                      <a
+                        href="tel:+4951284000778"
+                        className="text-primary-600 hover:text-primary-700 transition-colors font-medium"
+                      >
+                        05128&nbsp;4000778
+                      </a>
                     </p>
                   </div>
                 </div>
@@ -83,12 +90,9 @@ export default function KontaktPage() {
                     <h3 className="font-semibold text-text-primary mb-1">
                       E-Mail
                     </h3>
-                    <a
-                      href="mailto:bettina@geffert.de"
-                      className="text-primary-600 hover:text-primary-700 transition-colors"
-                    >
-                      bettina@geffert.de
-                    </a>
+                    <p className="text-text-secondary">
+                      bettina (at) geffert.de
+                    </p>
                   </div>
                 </div>
 
@@ -125,101 +129,7 @@ export default function KontaktPage() {
               <h2 className="font-serif text-3xl font-semibold text-text-primary mb-8">
                 Termin anfragen
               </h2>
-              <form className="space-y-6">
-                <div>
-                  <label
-                    htmlFor="name"
-                    className="block text-sm font-medium text-text-primary mb-2"
-                  >
-                    Name *
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    required
-                    className="w-full px-4 py-3 rounded-xl border border-warm-200 bg-white text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
-                    placeholder="Ihr vollständiger Name"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="email"
-                    className="block text-sm font-medium text-text-primary mb-2"
-                  >
-                    E-Mail *
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    required
-                    className="w-full px-4 py-3 rounded-xl border border-warm-200 bg-white text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
-                    placeholder="ihre.email@beispiel.de"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="phone"
-                    className="block text-sm font-medium text-text-primary mb-2"
-                  >
-                    Telefon
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    name="phone"
-                    className="w-full px-4 py-3 rounded-xl border border-warm-200 bg-white text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
-                    placeholder="Ihre Telefonnummer (optional)"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="child-age"
-                    className="block text-sm font-medium text-text-primary mb-2"
-                  >
-                    Alter des Kindes
-                  </label>
-                  <input
-                    type="text"
-                    id="child-age"
-                    name="child-age"
-                    className="w-full px-4 py-3 rounded-xl border border-warm-200 bg-white text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all"
-                    placeholder="z.B. 8 Jahre, 3. Klasse"
-                  />
-                </div>
-
-                <div>
-                  <label
-                    htmlFor="message"
-                    className="block text-sm font-medium text-text-primary mb-2"
-                  >
-                    Ihre Nachricht *
-                  </label>
-                  <textarea
-                    id="message"
-                    name="message"
-                    rows={5}
-                    required
-                    className="w-full px-4 py-3 rounded-xl border border-warm-200 bg-white text-text-primary placeholder:text-text-muted focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all resize-y"
-                    placeholder="Erzählen Sie mir kurz, wobei Ihr Kind Unterstützung braucht..."
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full bg-primary-600 text-white px-8 py-4 rounded-xl text-base font-medium hover:bg-primary-700 transition-all hover:shadow-lg hover:shadow-primary-600/20"
-                >
-                  Nachricht senden
-                </button>
-
-                <p className="text-text-muted text-xs text-center">
-                  Ich melde mich in der Regel innerhalb von 1–2 Werktagen bei Ihnen.
-                </p>
-              </form>
+              <ContactForm />
             </div>
           </div>
         </div>
