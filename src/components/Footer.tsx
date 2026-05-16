@@ -61,8 +61,28 @@ export default function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-primary-700 text-center text-sm text-primary-300">
-          <p>&copy; {new Date().getFullYear()} Bettina Geffert – LRS-Förderung Peine. Alle Rechte vorbehalten.</p>
+        <div className="mt-12 pt-8 border-t border-primary-700 flex flex-col sm:flex-row items-center justify-center gap-3 sm:gap-6 text-sm text-primary-300">
+          <p>
+            &copy; {new Date().getFullYear()} Bettina Geffert – LRS-Förderung
+            Peine
+          </p>
+          <nav className="flex items-center gap-4">
+            <Link
+              href="/impressum"
+              className="hover:text-white transition-colors"
+            >
+              Impressum
+            </Link>
+            <span className="text-primary-600" aria-hidden="true">
+              ·
+            </span>
+            <Link
+              href="/datenschutz"
+              className="hover:text-white transition-colors"
+            >
+              Datenschutz
+            </Link>
+          </nav>
         </div>
       </div>
     </footer>
